@@ -1,11 +1,16 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #D1E8E4;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  background-color: #D1E8E4;
+}
+
+img {
+  margin-top: 100px;
+  width: 450px;
 }
 
 .person {
@@ -14,7 +19,9 @@
 
 .btn {
   display: flex;
- justify-content: space-evenly;
+  margin: 0 auto;
+  width: 400px;
+  justify-content: space-between;
 }
 
 button {
@@ -23,4 +30,19 @@ button {
   padding: 10px;
   border: none;
   text-transform: uppercase;
+}
+
+@media all and (max-width: 500px){
+  img {
+    width: 300px;
+  }
+
+  h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btn {
+    width: 300px;
+  }
 }

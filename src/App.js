@@ -7,29 +7,29 @@ function App() {
   const { id, name, description, age, image } = data[person];
 
   const previousPerson = () => {
-    setPerson((person => {
-      person --;
+    setPerson((person) => {
+      person--;
       if (person < 0) {
         return data.length - 1;
       }
       return person;
-    }))
-  }
+    });
+  };
 
   const nextPerson = () => {
-    setPerson((person => {
-      person ++;
-      if(person > data.length - 1) {
+    setPerson((person) => {
+      person++;
+      if (person > data.length - 1) {
         person = 0;
       }
       return person;
-    }))
-  }
+    });
+  };
 
   return (
     <div>
       <div className="container">
-        <img src={image} width="300px" alt="person" />
+        <img src={image} alt="person" />
       </div>
 
       <div className="container">
@@ -46,11 +46,10 @@ function App() {
         <h2>{age} years old</h2>
       </div>
 
-    <div className="btn container">
-      <button onClick={previousPerson}>Previous</button>
-      <button onClick={nextPerson}>Next</button>
-    </div>
-
+      <div className="btn container">
+        <button onClick={previousPerson}>Previous</button>
+        <button onClick={nextPerson}>Next</button>
+      </div>
     </div>
   );
 }
